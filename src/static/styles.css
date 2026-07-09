@@ -59,10 +59,11 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #dfe5f2;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f7f9ff 100%);
+  box-shadow: 0 6px 18px rgba(26, 35, 126, 0.08);
 }
 
 .activity-card h4 {
@@ -72,6 +73,107 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d8e3ff;
+  background-color: #eef3ff;
+}
+
+.participants-title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #163b83;
+}
+
+.participants-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  color: #2f3a56;
+}
+
+.participant-item:last-child {
+  margin-bottom: 0;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.participant-empty {
+  color: #4f6288;
+  font-style: italic;
+}
+
+.remove-participant-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #f2b8bc;
+  background-color: #fff3f4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.remove-participant-btn:hover {
+  background-color: #ffe6e9;
+  border-color: #ea8a93;
+  transform: translateY(-1px);
+}
+
+.remove-participant-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+.trash-icon {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  border: 2px solid #c62828;
+  border-top: none;
+  border-radius: 1px;
+}
+
+.trash-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 14px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: #c62828;
+  border-radius: 1px;
+}
+
+.trash-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  transform: translateX(-50%);
+  background: #c62828;
+  box-shadow: -3px 0 0 #c62828, 3px 0 0 #c62828;
 }
 
 .form-group {
